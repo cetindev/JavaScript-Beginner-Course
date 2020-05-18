@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cevre Hesaplama</title>
+</head>
+
+<body>
+    <input type="text" id="kenar1" placeholder="Kısa kenar">
+    <input type="text" id="kenar2" placeholder="Uzun kenar">
+    <input type="button" value="Hesapla" id="hesapla">
+    <input type="Yanlış" id="yanlıs" placeholder="Yanlış">
+
+
+    <script>
+
+        function hesapla() {
+            var k1 = document.getElementById("kenar1").value;
+            var k2 = document.getElementById("kenar2").value;
+            k1 = Number(k1);
+            k2 = Number(k2);
+            var cevre = (k1 + k2) * 2;
+            alert("İki kenarı girilen dikdörtgenin çevresi:" + cevre);
+        }
+        //hesaplama yapması için hesap butonunu seçiyoruz.
+        var hesapBtn = document.getElementById("hesapla");
+
+        //fonksiyonu olaya bağlıyoruz.
+        hesapBtn.onclick = hesapla;
+
+
+    </script>
+</body>
+
+</html>

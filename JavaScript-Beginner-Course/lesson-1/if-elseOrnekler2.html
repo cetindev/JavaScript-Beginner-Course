@@ -1,0 +1,128 @@
+<!--
+<!doctype html>
+<html>
+<head>
+    <title>Klavye Olayları</title>
+    <style>
+        #kutu {
+            position: absolute;
+            left: 200px;
+            top: 200px;
+            width: 200px;
+            height: 200px;
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        /* kutu nesnesinin x ve y değerlerini okutuyoruz.*/
+        var kutu = document.getElementById("kutu");
+
+        window.onkeydown = function (olay) {
+
+            /* offsetLeft nesnenin sol kenardan ne kadar uzak olduğunu
+            offsetTop nesnenin üstten kenardan ne kadar uzak olduğunu gösterir*/
+            var y = kutu.offsetLeft  ,  x = kutu.offsetLeft;
+
+            //Sol Top Kodu:37 Ust Top Kodu:38 Sağ Top Kodu:39 Alt Top Kodu:40*/
+            /*hangi tuşa basıldığını kontrol edip, nesnenin yerini css ile kaydırıyoruz. yukarıdaki x ve y değerleri ile*/
+
+            if (olay.keyCode == 37) {
+                kutu.style.left = (x - 5) + "px";
+
+            }
+            else if (olay.keyCode == 38) {
+                kutu.style.top = (y - 5) + "px";
+            }
+            else if (olay.keyCode == 39) {
+                kutu.style.left = (x + 5) + "px";
+            }
+            else if (olay.keyCode == 40) {
+                kutu.style.top = (y + 5) + "px";
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
+-->
+<!--
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS02</title>
+    <h1>6-)JavaScript ile Dizi İçinde Arama</h1>
+</head>
+
+<body>
+    <input type="text" placeholder="ARANACAK KELİME" id="kelime">
+    <input type="button" value="ARAMA YAP" id="ara">
+    <div id="dizi-liste"></div>
+    <script>
+        var dizi = ["Ali", "Ahmet", "Mehmet", "Veysel", "Cihat", "Veli", "Hasan", "Murat", "Yasin", "Emrah","Ali","Ece","Eda","Elfida"
+    ,"Buse","Sena"];
+        var diziListe = document.getElementById("dizi-liste");
+        var kelime = document.getElementById("kelime");
+        var ara = document.getElementById("ara");
+        window.onload = function () {
+            diziListe.innerHTML = dizi;
+        }
+        ara.onclick = function () { 
+            var konum = dizi.lastIndexOf(kelime.value);
+            if (konum >= 0) {
+                alert("Aradığınız ifade dizide " + (konum + 1) + ". sırada bulunmaktadır.");
+            }
+            else {
+                alert("Aradığınız ifade dizide yoktur.");
+            }
+        }
+    </script>
+</body>
+
+</html>
+-->
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Klavyeden girilen en büyük ve en küçük sayılar</title>
+    <h1>ORNEK 7-) Javascript: Klavyeden Diziye Eklenen Sayılardan En Büyüğü ve En Küçüğü</h1>
+</head>
+
+<body>
+    <script>
+        /*Klavyeden girilen 10 sayıyı bir diziye atıp dizi içindeki en büyük ve en küçük sayıyı bulan program*/
+        var enbuyuk, enkucuk;
+        var dizi = new Array();
+
+        for (var i = 0; i < 10; i++) {
+            //kullanıcıdan sayı alma
+            var sayi = Number(window.prompt("Bir sayı giriniz", 0));
+
+            //alınan sayıyı diziye aktarma
+            dizi.push(sayi);
+        }
+        /* büyük ve küçük sayıyı bulmadan önce büyük ve küçük sayının dizinin ilk sayısı olduğunu varsayıyoruz.*/
+        enkucuk = dizi[0];
+        enbuyuk = dizi[0];
+        for (var i = 0; i < 10; i++) {
+            if (dizi[i] > enbuyuk) {
+                enbuyuk = dizi[i];
+            }
+            if (dizi[i] < enkucuk) {
+                enkucuk = dizi[i];
+            }
+        }
+        document.write("en büyük sayı:" + enbuyuk + "<br>");
+        document.write("en büyük sayı:" + enkucuk + "<br>");
+    </script>
+</body>
+</html>

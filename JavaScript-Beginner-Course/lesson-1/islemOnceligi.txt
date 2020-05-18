@@ -1,0 +1,73 @@
+
+    Öncelik	Operatör tipi	    İşleme yönü	    Operatör(ler)
+
+1   üye elemanlara erişme	    soldan sağa	        .  []
+1.1 nesne oluşturma	            sağdan sola	        new
+2	fonksiyon çağrısı	        soldan sağa	        ()
+3	bir arttırma	            mümkün değil	    ++
+3.1 bir azaltma	                mümkün değil	    --
+4	mantıksal değil	            sağdan sola	        !
+4.1 bitsel değil	            sağdan sola	        ~
+4.2 tek operandlı +	            sağdan sola	        +
+4.3 işaret değiştirme	        sağdan sola	        -
+4.4 typeof	                    sağdan sola	        typeof
+4.5 void	                    sağdan sola	        void
+4.6 delete	                    sağdan sola	        delete
+5	çarpma	                    soldan sağa	        *
+5.1 bölme	                    soldan sağa	        /
+5.2 mod alma	                soldan sağa	        %
+6	toplama	                    soldan sağa	        +
+6.1 çıkarma	                    soldan sağa	        -
+7	bitsel kaydırma	            soldan sağa	        <<
+                                                    >>
+                                                    >>>
+8	büyüklük-küçüklük 	        soldan sağa         <
+    karşılaştırması                                 <=
+                                                    >
+                                                    >=
+8.1 in	                        soldan sağa	        in
+8.2 instanceof	                soldan sağa	        instanceof
+9	eşitlik karşılaştırması	    soldan sağa	        ==
+                                                    !=
+                                                    ===
+                                                    !==
+10	bitsel ve	                soldan sağa	        &
+11	bitsel xor	                soldan sağa	        ^
+12	bitsel veya	                soldan sağa	        |
+13	mantıksal ve	            soldan sağa	        &&
+14	mantıksal veya	            soldan sağa	        ||
+15	koşul	                    sağdan sola	        ?:
+16	atama	                    sağdan sola	        =
+                                                    +=
+                                                    -=
+                                                    *=
+                                                    /=
+                                                    %=
+                                                    <<=
+                                                    >>=
+                                                    >>>=
+                                                    &=
+                                                    ^=
+                                                    |=
+17	virgül	                    soldan sağa	        ,   
+
+
+Aritmetik Operatörler
+
+
+Operatör	    Tanımı
+Kalan(%)	    İkili bölme işlemindeki tamsayılı bölmede kalan değeri getirir.
+Arttırma(++)	Belirtilen değeri bir arttırmak için kullanılır.
+Azaltma(–)      Belirtilen değeri bir azaltmak için kullanılır.
+Toplama (+)	    Belirtilen değerleri toplar. Farklı tipte değerler ise toplama için otomatik tür dönüşümü yapar.
+Fark (-)	    Önüne eklendiği sayısal değerin tersini alır. İki değeri bir birinden çıkarmak içinde bu operatör kullanılır.
+Çarpma (*)	    Matematiksel çarpma işlemi yapar.
+Bölme (/)	    Matematiksel bölme işlemi yapar.
+Üsalma (**)	    Üsalma işlemi için tanımlanmış operatör. (Örn: 2**3  sonuç:8) EcmaScript 7’de stardart olacak
+
+
+
+
+
+
+

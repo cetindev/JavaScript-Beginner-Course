@@ -1,0 +1,138 @@
+<!--
+<h1>ORNEK-1 Text kutusundaki öğrenci notu değiştiğinde ekrana öğrencinin durumunu yazmaktadır.</h1>
+<h1></h1><h1></h1>
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>if else örnekleri</title>
+</head>
+
+<body>
+    <input type="number" id="ogrnot">
+    <h1></h1>
+    <div id="durumgoster"></div>
+    <script>
+        function notHesapla() {
+            var ogrenciNotu = Number(ogrenciNot.value);//dışarıdaki global nesnseyi alıyor
+            //durumun gösterileceği div seçildi. Bu divin icine öğrenci notunu göstereceğiz
+            var durumGoster = document.getElementById("durumgoster");
+            if (ogrenciNotu < 0) {
+                //value attribute olan nesneler için value
+                //bunun dışındaki nesneler için innerHTML kullanılır. (Nesne içine değer yazmak için yada okumak)
+                durumGoster.innerHTML = "HATALI NOT";
+            }
+            else if (ogrenciNotu < 50) {
+                durumGoster.innerHTML = "KALDINIZ";
+            }
+            else if (ogrenciNotu < 60) {
+                durumGoster.innerHTML = "GEÇER";
+            }
+            else if (ogrenciNotu < 70) {
+                durumGoster.innerHTML = "ORTA";
+            }
+            else if (ogrenciNotu < 85) {
+                durumGoster.innerHTML = "İYİ";
+            }
+            else if (ogrenciNotu <= 100) {
+                durumGoster.innerHTML = "PEKİYİ";
+            }
+            else {
+                durumGoster.innerHTML = "HATALI NOT";
+            }
+        }
+        //ogrnot nesnesindeki değeri okuduk.
+        //string tipinde okunan değeri Number ile sayısala çevirdik
+        var ogrenciNot = document.getElementById("ogrnot");
+        ogrenciNot.onchange = notHesapla;
+    </script>
+</body>
+
+</html>
+-->
+<!--
+<h1>ORNEK 2-)Kullanıcı tarafından girilen sayı sıfırdan büyükse pozitif, sıfırdan küçükse negatif, sıfıra eşitse sıfır
+    yazdıran program.</h1>
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>if else örnekleri-2</title>
+</head>
+
+<body>
+    <input type="number" id="sayi">
+    <input type="button" id="hesapla" value="-HESAPLA-">
+    <div id="durumgoster"></div>
+    <script>
+        var sayiNesne = document.getElementById("sayi");
+        var hesaplaBtn = document.getElementById("hesapla");
+        //tıklama olayına islemYap metodunu bağlıyoruz. 
+        //burada metod çalışmadığı için parantez olmaz.
+        hesaplaBtn.onclick = islemYap;
+        function islemYap() {
+            var sayi = Number(sayiNesne.value);//dışarıdaki global nesnseyi alıyor
+            //durumun gösterileceği div seçildi. Bu divin icine öğrenci notunu göstereceğiz
+            var durumGoster = document.getElementById("durumgoster");
+            if (sayi < 0) {
+                durumGoster.innerHTML = "SAYI NEGATİFTİR.";
+            }
+            else if (sayi > 0) {
+                durumGoster.innerHTML = "SAYI POZİTİFTİR";
+            }
+            else {
+                durumGoster.innerHTML = "SAYI SIFIRDIR";
+            }
+        }
+    </script>
+</body>
+
+</html>
+-->
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS02</title>
+</head>
+
+<body>
+    <h1>Ornek 6-)JavaScript ile Dizi İçinde Arama</h1>
+    <input type="text" placeholder="ARANACAK KELİME" id="kelime">
+    <input type="button" value="ARAMA YAP" id="ara">
+    <div id="dizi-liste"></div>
+
+    <script>
+        var dizi = ["Ali", "Ahmet", "Mehmet", "Veysel"];
+        var diziListe = document.getElementById("dizi-liste");
+        var kelime = document.getElementById("kelime");
+        var ara = document.getElementById("ara");
+
+
+        window.onload = function () {
+
+            diziListe.innerHTML = dizi;
+        }
+
+        ara.onclick = function () {
+
+            var konum = dizi.lastIndexOf(kelime.value);
+            if (konum >= 0) {
+                alert("aradığınız ifade dizide " + (konum + 1) + " sırada bulunmaktadır.");
+            }
+            else {
+                alert("aradığınız ifade dizide yoktur.");
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>
